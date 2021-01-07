@@ -7,7 +7,7 @@ For creating a sudo user follow the steps in [How To Create a Sudo User on Ubunt
 ## 2. Installing Jenkins on Ubuntu 18.04
 To install Jenkings on ubuntu 18.04 follow the steps in [Install Jenkins on Ubuntu](https://linuxize.com/post/how-to-install-jenkins-on-ubuntu-18-04/).
 
-**Note**: If the firewall is inactive, the following commands will allow OpenSSH and enable the firewall:
+**Note**: _If the firewall is inactive, the following commands will allow OpenSSH and enable the firewall:_
 
 ```
 sudo ufw allow OpenSSH
