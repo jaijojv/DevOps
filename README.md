@@ -33,25 +33,25 @@ sudo ufw enable
    4. Select "**Permanent Agent**" option
    5. press "**OK**"
 - Enter the configuration details for slave node
-  1. Name(Jenkins-slave-1)
-  2. Description(Jenkins-slave-1)
- 	3. No of executors	(1 or more)
- 	4. Remote root directory	: /home/ubuntu/jenkins
+  1. Name(**Jenkins-slave-1**)
+  2. Description(**Jenkins-slave-1**)
+ 	3. No of executors(**1 or more**)
+ 	4. Remote root directory(**/home/ubuntu/jenkins**)
      - Remote directory is mandatory
- 	5. Labels(Jenkins-slave-1)
- 	6. Usage	(Use this node as much as possible)
- 	7. Launch method (Launch agent via SSH)
+ 	5. Labels(**Jenkins-slave-1**)
+ 	6. Usage	(**Use this node as much as possible**)
+ 	7. Launch method (**Launch agent via SSH**)
      - Host	(Public IPv4 address of slave EC2 instance copied before : 18.XXX.159.48). The Host must be specified.
  	   - Credentials	
        - For adding Credentials Click on **Add** dropdown >> Choose **Jenkins**
-       - Then a popup window will appear (Jenkins Credentials Provider: Jenkins)
+       - Then a popup window will appear (**Jenkins Credentials Provider: Jenkins**)
          - **Add Credentials**
-            - Domain: Global credentials (unrestricted)
-            - Kind: SSH Username with private key
-            - Scope: Global (Jenkins, nodes, items, all child items, etc)
-            - ID: Jenkins-slave-1
-            - Description: Jenkins-slave-1
-            - Username: ubuntu
+            - Domain: **Global credentials (unrestricted)**
+            - Kind: **SSH Username with private key**
+            - Scope: **Global (Jenkins, nodes, items, all child items, etc)**
+            - ID: **Jenkins-slave-1**
+            - Description: **Jenkins-slave-1**
+            - Username: **ubuntu**
             - Private Key: Select **Enter directly** option
             - Click on **Add** button and enter the SSHPrivate Key(Example : This is the content of **.pem** file)
              ```
@@ -67,4 +67,4 @@ sudo ufw enable
           - Choose the **ubuntu(Jenkins-slave-1)** option
           - Host Key Verification Strategy: Choose "**Manually trusted key Verification Strategy**".
 
-  8.  	Availability: Keep this agent online as much as possible
+  8.  	Availability: **Keep this agent online as much as possible**.
