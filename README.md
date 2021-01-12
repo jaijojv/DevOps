@@ -41,30 +41,31 @@ sudo ufw enable
  	5. Labels(**Jenkins-slave-1**)
  	6. Usage	(**Use this node as much as possible**)
  	7. Launch method (**Launch agent via SSH**)
-     - Host	(Public IPv4 address of slave EC2 instance copied before : 18.XXX.159.48). The Host must be specified.
- 	   - Credentials	
-       - For adding Credentials Click on **Add** dropdown >> Choose **Jenkins**
-       - Then a popup window will appear (**Jenkins Credentials Provider: Jenkins**)
-         - **Add Credentials**
-            - Domain: **Global credentials (unrestricted)**
-            - Kind: **SSH Username with private key**
-            - Scope: **Global (Jenkins, nodes, items, all child items, etc)**
-            - ID: **Jenkins-slave-1**
-            - Description: **Jenkins-slave-1**
-            - Username: **ubuntu**
-            - Private Key: Select **Enter directly** option
-            - Click on **Add** button and enter the SSHPrivate Key(Example : This is the content of **.pem** file)
-             ```
-            -----BEGIN RSA PRIVATE KEY-----
-            MIIEpAIBAAKCAQEAxwpW8iFkMtCIPKNcdVY2DjdPhSf9/EzLgAhhhFZRlij2Vo2X 
-            lBV5hTYOOtvRJ8nzJWvDv+bNAeI3HnkU0ve747LFKpX6PizdCFZZ+/b1JmorNDzy
-            BNAZkGcIj5ZvttJqVz2gJZzFKD6gymYT0M1Wp9jesBN1dSiwchC+yccbrNIttORn
-            3q1yzBcprxLXJDD9mfuiWG1Me75d+I96oY0YYrPV3kyUxwNYrCUaJRCrUcfSjcZb
-            -----END RSA PRIVATE KEY-----
-            ```
-            - Then click on **Add** button
-          - Then click on the dropdown showing **-none-** left side of the **Add** button
-          - Choose the **ubuntu(Jenkins-slave-1)** option
-          - Host Key Verification Strategy: Choose "**Manually trusted key Verification Strategy**".
+     _- Then do the following_
+       - Host	(Public IPv4 address of slave EC2 instance copied before : 18.XXX.159.48). The Host must be specified.
+       - Credentials	
+         - For adding Credentials Click on **Add** dropdown >> Choose **Jenkins**
+         - Then a popup window will appear (**Jenkins Credentials Provider: Jenkins**)
+           - **Add Credentials**
+              - Domain: **Global credentials (unrestricted)**
+              - Kind: **SSH Username with private key**
+              - Scope: **Global (Jenkins, nodes, items, all child items, etc)**
+              - ID: **Jenkins-slave-1**
+              - Description: **Jenkins-slave-1**
+              - Username: **ubuntu**
+              - Private Key: Select **Enter directly** option
+              - Click on **Add** button and enter the SSHPrivate Key(Example : This is the content of **.pem** file)
+               ```
+              -----BEGIN RSA PRIVATE KEY-----
+              MIIEpAIBAAKCAQEAxwpW8iFkMtCIPKNcdVY2DjdPhSf9/EzLgAhhhFZRlij2Vo2X 
+              lBV5hTYOOtvRJ8nzJWvDv+bNAeI3HnkU0ve747LFKpX6PizdCFZZ+/b1JmorNDzy
+              BNAZkGcIj5ZvttJqVz2gJZzFKD6gymYT0M1Wp9jesBN1dSiwchC+yccbrNIttORn
+              3q1yzBcprxLXJDD9mfuiWG1Me75d+I96oY0YYrPV3kyUxwNYrCUaJRCrUcfSjcZb
+              -----END RSA PRIVATE KEY-----
+              ```
+              - Then click on **Add** button
+            - Then click on the dropdown showing **-none-** left side of the **Add** button
+            - Choose the **ubuntu(Jenkins-slave-1)** option
+            - Host Key Verification Strategy: Choose "**Manually trusted key Verification Strategy**".
 
   8.  	Availability: **Keep this agent online as much as possible**.
