@@ -63,8 +63,8 @@ sudo ufw enable
             -----END RSA PRIVATE KEY-----
             ```
             - Then click on **Add** button
-          - Then click on the dropdown showing **-none-** left of the **Add** button
-          - Choose the **ubuntu(Jenkins-slave-1)**
-          - Host Key Verification Strategy: Choose "Manually trusted key Verification Strategy".
+          - Then click on the dropdown showing **-none-** left side of the **Add** button
+          - Choose the **ubuntu(Jenkins-slave-1)** option
+          - Host Key Verification Strategy: Choose "**Manually trusted key Verification Strategy**".
 
   8.  	Availability: Keep this agent online as much as possible
