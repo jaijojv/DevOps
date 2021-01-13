@@ -1,5 +1,7 @@
 # JENKINS ON EC2 : SETTING UP MASTER AND SLAVE NODES ON UBUNTU 18.04
 
+## ***To setting up Jenkins Master/Slave configuration we need at least two AWS EC2 instances with Ubuntu OS installed***.
+
 At First to manage our Jenkins installation we need to create a sudo user.
 ## 1. Creating a Sudo User on Ubuntu
 For creating a sudo user follow the steps in [How To Create a Sudo User on Ubuntu](https://linuxize.com/post/how-to-create-a-sudo-user-on-ubuntu/).
