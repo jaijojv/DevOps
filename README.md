@@ -69,3 +69,6 @@ sudo ufw enable
        - Host Key Verification Strategy: Choose "**Manually trusted key Verification Strategy**".
 
   8.  	Availability: **Keep this agent online as much as possible**.
+  
+Then go back to **Dashboard >> Nodes** list then you can see a **X** mark on the slave icon and check the log for "**Agent successfully connected and online**", then go back to the list again - the **X** mark will be removed and the Slave will "**In sync**" with Jenkins-Master.
+
