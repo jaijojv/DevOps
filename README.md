@@ -63,9 +63,29 @@ _Output:_
 For creating a sudo user follow the steps in [How To Create a Sudo User on Ubuntu](https://linuxize.com/post/how-to-create-a-sudo-user-on-ubuntu/).
 
 ## 2. Installing Jenkins Master on Ubuntu 18.04
-Prerequisites:
+**Prerequisites:**
 
-Before starting installation, make sure you are logged in as a user with sudo privileges
+Before starting installation, make sure you are logged in as a user with ```sudo``` privileges.
+
+To install Jenkins on your Ubuntu system, follow these steps:
+1. Install Java.
+
+First, update the apt package index with:
+```
+sudo apt update
+```
+The current version of Jenkins does not support Java 10 (and Java 11) yet. If you have multiple versions of Java installed on your machine make sure Java 8 is the default Java version.
+```
+sudo apt install openjdk-8-jdk
+```
+Verify the installation, by running the following command which will print the Java version
+```
+java -version
+```
+
+2. Add the Jenkins Debian repository.
+3. Install Jenkins.
+4. Adjusting Firewall.
 
 To install Jenkings on ubuntu 18.04 follow the steps in [Install Jenkins on Ubuntu](https://linuxize.com/post/how-to-install-jenkins-on-ubuntu-18-04/).
 
