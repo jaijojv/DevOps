@@ -82,19 +82,68 @@ Verify the installation, by running the following command which will print the J
 ```
 java -version
 ```
+For more details [How to Install Java on Ubuntu 18.04](https://linuxize.com/post/install-java-on-ubuntu-18-04/)
 
 2. Add the Jenkins Debian repository.
+
+Import the GPG keys of the Jenkins repository using the following ```wget``` command:
+```
+wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+```
+The command above should output ```OK``` which means that the key has been successfully imported and packages from this repository will be considered trusted.
+
+Next, add the Jenkins repository to the system with:
+```
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+```
 3. Install Jenkins.
+
+Once the Jenkins repository is enabled, update the apt package list and install the latest version of Jenkins by typing:
+```
+sudo apt update
+sudo apt install jenkins
+```
+Jenkins service will automatically start after the installation process is complete. You can verify it by printing the service status:
+```
+systemctl status jenkins
+```
+You should see something similar to this:
+
+_Output:_
+```
+jenkins.service - LSB: Start Jenkins at boot time
+Loaded: loaded (/etc/init.d/jenkins; generated)
+Active: active (exited) since Wed 2018-08-22 13:03:08 PDT; 2min 16s ago
+    Docs: man:systemd-sysv-generator(8)
+    Tasks: 0 (limit: 2319)
+CGroup: /system.slice/jenkins.service
+```
 4. Adjusting Firewall.
+If you are installing Jenkins on a remote Ubuntu server that is protected by a firewall you’ll need to open port ```8080```. Assuming you are using ```UFW``` to manage your firewall, you can open the port with the following command:
+```
+sudo ufw allow 8080
+```
+Verify the change with:
+```
+sudo ufw status
+```
+_Output:_
+```
+Status: active
 
-To install Jenkings on ubuntu 18.04 follow the steps in [Install Jenkins on Ubuntu](https://linuxize.com/post/how-to-install-jenkins-on-ubuntu-18-04/).
-
+To                         Action      From
+--                         ------      ----
+OpenSSH                    ALLOW       Anywhere
+8080                       ALLOW       Anywhere
+OpenSSH (v6)               ALLOW       Anywhere (v6)
+8080 (v6)                  ALLOW       Anywhere (v6)
+```
 **Note**: _If the firewall is inactive, the following commands will allow OpenSSH and enable the firewall:_
-
 ```
 sudo ufw allow OpenSSH
 sudo ufw enable
 ```
+For more detals [How to install Jenkins on Ubuntu](https://linuxize.com/post/how-to-install-jenkins-on-ubuntu-18-04/).
 ## 3. Creating Slave node
  - Create one more EC2 instance as Jenkins-Slave on Ubuntu 18.04 with the same key-pair used for creating Jenkins-Master
  - Install Java on the Server with the same version of the Jenkins-Master [how to install java on ubuntu 18.04](https://linuxize.com/post/install-java-on-ubuntu-18-04/)
