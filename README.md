@@ -4,9 +4,69 @@
 
 At First to manage our Jenkins installation we need to create a sudo user.
 ## 1. Creating a Sudo User on Ubuntu
+Log in to your system as the root user. Then run the following commands.
+
+_Command:_
+```
+adduser username
+```
+_Output:_
+```
+Adding user `username' ...
+Adding new group `username' (1001) ...
+Adding new user `username' (1001) with group `username' ...
+Creating home directory `/home/username' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for username
+Enter the new value, or press ENTER for the default
+    Full Name []:
+    Room Number []:
+    Work Phone []:
+    Home Phone []:
+    Other []:
+Is the information correct? [Y/n]
+```
+Add the new user to the sudo group
+
+_Command:_
+```
+usermod -aG sudo username
+```
+Test the sudo access
+Switch to the newly created user:
+```
+su - username
+```
+Use sudo to run the ```whoami```.
+
+_Command:_
+```
+sudo whoami
+```
+_Output:_
+```
+root
+```
+To use sudo, simply prefix the command with ```sudo``` and space:
+```
+sudo ls -l /root
+```
+The first time you use sudo in a session, you will be prompted to enter the user password:
+
+_Output:_
+```
+[sudo] password for username:
+```
 For creating a sudo user follow the steps in [How To Create a Sudo User on Ubuntu](https://linuxize.com/post/how-to-create-a-sudo-user-on-ubuntu/).
 
 ## 2. Installing Jenkins Master on Ubuntu 18.04
+Prerequisites:
+
+Before starting installation, make sure you are logged in as a user with sudo privileges
+
 To install Jenkings on ubuntu 18.04 follow the steps in [Install Jenkins on Ubuntu](https://linuxize.com/post/how-to-install-jenkins-on-ubuntu-18-04/).
 
 **Note**: _If the firewall is inactive, the following commands will allow OpenSSH and enable the firewall:_
