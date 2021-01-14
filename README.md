@@ -204,3 +204,14 @@ For more details: [How to install Jenkins on Ubuntu](https://linuxize.com/post/h
   
 Then go back to **Dashboard >> Nodes** list then you can see a **X** mark on the slave icon and check the log for "**Agent successfully connected and online**", then go back to the list again - the **X** mark will be removed and the Slave will "**In sync**" with Jenkins-Master.
 
+Do the same to create Slave Node #2. This time we'll use "Copy Existing Node":
+
+## Testing the Jenkins Master/Slave configuration
+
+For testing the Jenkins Master/Slave configuration we need to create two or three Jenkin jobs and build it concurrently. then the jobs will be distributed between Master and Slave.
+
+1. Go to Jenkins Dashboard and create two new jobs.
+
+We're going to run a very simple job: sleep 30 seconds:
+
+Create another one for job 2 doing the same thing: sleep 30s.
