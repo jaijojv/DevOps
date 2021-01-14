@@ -60,7 +60,7 @@ _Output:_
 ```
 [sudo] password for username:
 ```
-For creating a sudo user follow the steps in [How To Create a Sudo User on Ubuntu](https://linuxize.com/post/how-to-create-a-sudo-user-on-ubuntu/).
+For more details: [How To Create a Sudo User on Ubuntu](https://linuxize.com/post/how-to-create-a-sudo-user-on-ubuntu/).
 
 ## 2. Installing Jenkins Master on Ubuntu 18.04
 **Prerequisites:**
@@ -82,7 +82,7 @@ Verify the installation, by running the following command which will print the J
 ```
 java -version
 ```
-For more details [How to Install Java on Ubuntu 18.04](https://linuxize.com/post/install-java-on-ubuntu-18-04/)
+For more details: [How to Install Java on Ubuntu 18.04](https://linuxize.com/post/install-java-on-ubuntu-18-04/)
 
 2. Add the Jenkins Debian repository.
 
@@ -143,7 +143,7 @@ OpenSSH (v6)               ALLOW       Anywhere (v6)
 sudo ufw allow OpenSSH
 sudo ufw enable
 ```
-For more detals [How to install Jenkins on Ubuntu](https://linuxize.com/post/how-to-install-jenkins-on-ubuntu-18-04/).
+For more details: [How to install Jenkins on Ubuntu](https://linuxize.com/post/how-to-install-jenkins-on-ubuntu-18-04/).
 ## 3. Creating Slave node
  - Create one more EC2 instance as Jenkins-Slave on Ubuntu 18.04 with the same key-pair used for creating Jenkins-Master
  - Install Java on the Server with the same version of the Jenkins-Master [how to install java on ubuntu 18.04](https://linuxize.com/post/install-java-on-ubuntu-18-04/)
