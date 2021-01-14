@@ -68,7 +68,7 @@ For more details: [How To Create a Sudo User on Ubuntu](https://linuxize.com/pos
 Before starting installation, make sure you are logged in as a user with ```sudo``` privileges.
 
 To install Jenkins on your Ubuntu system, follow these steps:
-1. Install Java.
+**1. Install Java.**
 
 First, update the apt package index with:
 ```
@@ -84,7 +84,7 @@ java -version
 ```
 For more details: [How to Install Java on Ubuntu 18.04](https://linuxize.com/post/install-java-on-ubuntu-18-04/)
 
-2. Add the Jenkins Debian repository.
+**2. Add the Jenkins Debian repository.**
 
 Import the GPG keys of the Jenkins repository using the following ```wget``` command:
 ```
@@ -96,7 +96,7 @@ Next, add the Jenkins repository to the system with:
 ```
 sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 ```
-3. Install Jenkins.
+**3. Install Jenkins.**
 
 Once the Jenkins repository is enabled, update the apt package list and install the latest version of Jenkins by typing:
 ```
@@ -118,7 +118,7 @@ Active: active (exited) since Wed 2018-08-22 13:03:08 PDT; 2min 16s ago
     Tasks: 0 (limit: 2319)
 CGroup: /system.slice/jenkins.service
 ```
-4. Adjusting Firewall.
+**4. Adjusting Firewall.**
 If you are installing Jenkins on a remote Ubuntu server that is protected by a firewall you’ll need to open port ```8080```. Assuming you are using ```UFW``` to manage your firewall, you can open the port with the following command:
 ```
 sudo ufw allow 8080
