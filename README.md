@@ -68,6 +68,7 @@ For more details: [How To Create a Sudo User on Ubuntu](https://linuxize.com/pos
 Before starting installation, make sure you are logged in as a user with ```sudo``` privileges.
 
 To install Jenkins on your Ubuntu system, follow these steps:
+
 **1. Install Java.**
 
 First, update the apt package index with:
