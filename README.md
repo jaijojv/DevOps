@@ -4,7 +4,7 @@
 
 At First to manage our Jenkins installation we need to create a sudo user.
 ## 1. Creating a Sudo User on Ubuntu for Jenkins
-Log in to your system as the root user. Then run the following commands(Prefered username is **jenkins**. If you want any other username please modify the commands accordingly)
+Log in to your system as the root user. Then run the following commands(Preferred username is **jenkins**. If you want any other username please modify the commands accordingly)
 
 _Command:_
 ```
