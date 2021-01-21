@@ -8,7 +8,7 @@ Log in to your system as the root user. Then run the following commands(Prefered
 
 _Command:_
 ```
-adduser Jenkins
+adduser jenkins
 ```
 _Output:_
 ```
