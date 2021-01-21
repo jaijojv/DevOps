@@ -139,11 +139,14 @@ OpenSSH                    ALLOW       Anywhere
 OpenSSH (v6)               ALLOW       Anywhere (v6)
 8080 (v6)                  ALLOW       Anywhere (v6)
 ```
-**Note**: _If the firewall is inactive, the following commands will allow OpenSSH and enable the firewall:_
+**Note**: _Also add and open HTTP port at 8080 in EC2 Security group._
+
+_If the firewall is inactive, the following commands will allow OpenSSH and enable the firewall:_
 ```
 sudo ufw allow OpenSSH
 sudo ufw enable
 ```
+
 For more details: [How to install Jenkins on Ubuntu](https://linuxize.com/post/how-to-install-jenkins-on-ubuntu-18-04/).
 ## 3. Creating Slave node
  - Create one more EC2 instance as Jenkins-Slave on Ubuntu 18.04 with the same key-pair used for creating Jenkins-Master
@@ -218,7 +221,7 @@ Give Description >>
 We're going to run a very simple job: sleep 30 seconds:
 under **build** section add shell script ***sleep 30***, then save the job.
 
-Create another one for job Job2 doing the same thing: sleep 30s.
+Create another one for job **Job2** doing the same thing: sleep 30s.
 
-Then run build for Job1 and Job2.
+Then run build for **Job1** and **Job2**.
 Then we ca see that one job will run in the slave#1 and other will be in the slave#2.
