@@ -216,6 +216,7 @@ For testing the Jenkins Master/Slave configuration we need to create two or thre
 Give Description >> 
 
 We're going to run a very simple job: sleep 30 seconds:
+under **build** section add shell script ***sleep 30***, then save the job.
 
 Create another one for job Job2 doing the same thing: sleep 30s.
 
