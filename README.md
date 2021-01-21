@@ -3,19 +3,19 @@
 ## ***To setting up Jenkins Master/Slave configuration we need at least two AWS EC2 instances with Ubuntu OS installed***.
 
 At First to manage our Jenkins installation we need to create a sudo user.
-## 1. Creating a Sudo User on Ubuntu
-Log in to your system as the root user. Then run the following commands.
+## 1. Creating a Sudo User on Ubuntu for Jenkins
+Log in to your system as the root user. Then run the following commands(Prefered username is **jenkins**. If you want any other username please modify the commands accordingly)
 
 _Command:_
 ```
-adduser username
+adduser Jenkins
 ```
 _Output:_
 ```
-Adding user `username' ...
-Adding new group `username' (1001) ...
-Adding new user `username' (1001) with group `username' ...
-Creating home directory `/home/username' ...
+Adding user `jenkins' ...
+Adding new group `jenkins' (1001) ...
+Adding new user `jenkins' (1001) with group `jenkins' ...
+Creating home directory `/home/jenkins' ...
 Copying files from `/etc/skel' ...
 New password:
 Retype new password:
@@ -27,18 +27,18 @@ Enter the new value, or press ENTER for the default
     Work Phone []:
     Home Phone []:
     Other []:
-Is the information correct? [Y/n]
+Is the information correct? [Y/n] Y
 ```
 Add the new user to the sudo group
 
 _Command:_
 ```
-usermod -aG sudo username
+usermod -aG sudo jenkins
 ```
 Test the sudo access
 Switch to the newly created user:
 ```
-su - username
+su - jenkins
 ```
 Use sudo to run the ```whoami```.
 
@@ -58,7 +58,7 @@ The first time you use sudo in a session, you will be prompted to enter the user
 
 _Output:_
 ```
-[sudo] password for username:
+[sudo] password for jenkins:
 ```
 For more details: [How To Create a Sudo User on Ubuntu](https://linuxize.com/post/how-to-create-a-sudo-user-on-ubuntu/).
 
@@ -208,10 +208,16 @@ Do the same to create Slave Node #2. This time we'll use "Copy Existing Node":
 
 ## Testing the Jenkins Master/Slave configuration
 
-For testing the Jenkins Master/Slave configuration we need to create two or three Jenkin jobs and build it concurrently. then the jobs will be distributed between Master and Slave.
+For testing the Jenkins Master/Slave configuration we need to create two or three Jenkins jobs and build it concurrently. then the jobs will be distributed between Master and Slave.
 
 1. Go to Jenkins Dashboard and create two new jobs.
 
+**Dashboard** >> **New Item** >> Give **Item name** (Example: Job1) >> Choose **FreeStyle project** >> Press **OK** 
+Give Description >> 
+
 We're going to run a very simple job: sleep 30 seconds:
 
-Create another one for job 2 doing the same thing: sleep 30s.
+Create another one for job Job2 doing the same thing: sleep 30s.
+
+Then run build for Job1 and Job2.
+Then we ca see that one job will run in the slave#1 and other will be in the slave#2.
