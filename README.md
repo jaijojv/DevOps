@@ -33,7 +33,7 @@ Add the new user to the sudo group
 
 _Command:_
 ```
-usermod -aG sudo jenkins
+sudo usermod -aG sudo jenkins
 ```
 Test the sudo access
 Switch to the newly created user:
