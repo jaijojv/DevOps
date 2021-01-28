@@ -8,7 +8,7 @@ Log in to your system as the root user. Then run the following commands(Preferre
 
 _Command:_
 ```
-adduser jenkins
+sudo adduser jenkins
 ```
 _Output:_
 ```
