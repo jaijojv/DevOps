@@ -154,9 +154,12 @@ Browse to http://localhost:8080 (or whichever port you configured for Jenkins wh
 **Unlock Jenkins**
 To ensure Jenkins is securely set up by the administrator, a password has been written to the log (not sure where to find it?) and this file on the server:
 
-```/var/lib/jenkins/secrets/initialAdminPassword```
+_/var/lib/jenkins/secrets/initialAdminPassword_
 
+The command: ```sudo cat /var/lib/jenkins/secrets/initialAdminPassword``` will print the password at console.
 Please copy the password from either location and paste it.
+
+From the Jenkins console log output, copy the automatically-generated alphanumeric password (between the 2 sets of asterisks).
 
 For more details: [How to install Jenkins on Ubuntu](https://linuxize.com/post/how-to-install-jenkins-on-ubuntu-18-04/).
 ## 3. Creating Slave node
