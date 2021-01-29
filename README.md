@@ -159,7 +159,7 @@ _/var/lib/jenkins/secrets/initialAdminPassword_
 The command: ```sudo cat /var/lib/jenkins/secrets/initialAdminPassword``` will print the password at console.
 Please copy the password from either location and paste it.
 
-From the Jenkins console log output, copy the automatically-generated alphanumeric password (between the 2 sets of asterisks).
+From the Jenkins console log output, copy the automatically-generated alphanumeric password.
 
 **Customizing Jenkins with plugins**
 
