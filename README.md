@@ -161,7 +161,35 @@ Please copy the password from either location and paste it.
 
 From the Jenkins console log output, copy the automatically-generated alphanumeric password (between the 2 sets of asterisks).
 
+**Customizing Jenkins with plugins**
+
+After unlocking Jenkins, the Customize Jenkins page appears. Here you can install any number of useful plugins as part of your initial setup.
+
+Click one of the two options shown:
+
+_Install suggested plugins_ - to install the recommended set of plugins, which are based on most common use cases.
+
+_Select plugins to install_ - to choose which set of plugins to initially install. When you first access the plugin selection page, the suggested plugins are selected by default.
+
+If you are not sure what plugins you need, choose Install suggested plugins. You can install (or remove) additional Jenkins plugins at a later point in time via the Manage Jenkins > Manage Plugins page in Jenkins
+
+**Creating the first administrator user**
+
+Finally, after customizing Jenkins with plugins, Jenkins asks you to create your first administrator user.
+
+When the Create First Admin User page appears, specify the details for your administrator user in the respective fields and click Save and Finish.
+
+When the Jenkins is ready page appears, click Start using Jenkins.
+Notes:
+
+This page may indicate Jenkins is almost ready! instead and if so, click Restart.
+
+If the page does not automatically refresh after a minute, use your web browser to refresh the page manually.
+
+If required, log in to Jenkins with the credentials of the user you just created and you are ready to start using Jenkins!
+
 For more details: [How to install Jenkins on Ubuntu](https://linuxize.com/post/how-to-install-jenkins-on-ubuntu-18-04/).
+
 ## 3. Creating Slave node
  - Create one more EC2 instance as Jenkins-Slave on Ubuntu 18.04 with the same key-pair used for creating Jenkins-Master
  - Install Java on the Server with the same version of the Jenkins-Master [how to install java on ubuntu 18.04](https://linuxize.com/post/install-java-on-ubuntu-18-04/)
