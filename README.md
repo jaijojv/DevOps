@@ -154,7 +154,7 @@ Browse to http://localhost:8080 (or whichever port you configured for Jenkins wh
 **Unlock Jenkins**
 To ensure Jenkins is securely set up by the administrator, a password has been written to the log (not sure where to find it?) and this file on the server:
 
-/var/lib/jenkins/secrets/initialAdminPassword
+```/var/lib/jenkins/secrets/initialAdminPassword```
 
 Please copy the password from either location and paste it.
 
