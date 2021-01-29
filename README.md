@@ -147,6 +147,17 @@ sudo ufw allow OpenSSH
 sudo ufw enable
 ```
 
+When you first access a new Jenkins instance, you are asked to unlock it using an automatically-generated password.
+
+Browse to http://localhost:8080 (or whichever port you configured for Jenkins when installing it) and wait until the Unlock Jenkins page appears.
+
+**Unlock Jenkins**
+To ensure Jenkins is securely set up by the administrator, a password has been written to the log (not sure where to find it?) and this file on the server:
+
+/var/lib/jenkins/secrets/initialAdminPassword
+
+Please copy the password from either location and paste it.
+
 For more details: [How to install Jenkins on Ubuntu](https://linuxize.com/post/how-to-install-jenkins-on-ubuntu-18-04/).
 ## 3. Creating Slave node
  - Create one more EC2 instance as Jenkins-Slave on Ubuntu 18.04 with the same key-pair used for creating Jenkins-Master
